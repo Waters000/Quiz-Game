@@ -13,6 +13,7 @@ function taking quiz to next question
 
 
 var btnStartEl = document.querySelector('#start-btn');
+var btnNextEl = document.querySelector('#next-btn');
 var questionContainerEl = document.querySelector('#question-container')
 var questionEl = document.getElementById('question')
 var answerButtonsEl = document.getElementById('answer-buttons')
@@ -22,6 +23,10 @@ let shuffledQuestions, currentQuestionIndex
 var questions;
 
 btnStartEl.addEventListener('click', startGame)
+btnNextEl.addEventListener('click', () => {
+    currentQuestionIndex++
+    setNextQuestion();
+})
 
 
 // function for start game
@@ -39,6 +44,7 @@ function startGame() {
 // function to start next question
 
 function setNextQuestion() {
+    resetState();
  showQuestion(shuffledQuestions[currentQuestionIndex])
 };
 
@@ -59,8 +65,45 @@ function showQuestion(question) {
 };
 
 function selectAnswer(e) {
-
+  var selectedButton = e.target
+  var correct = selectedButton.dataset.correct
+  setStatusClass(document.body, correct)
+  Array.from(answerButtonsEl.children).forEach(button => {
+      setStatusClass(button, button.dataset.correct)
+  })
+  if (shuffledQuestions.length > currentQuestionIndex +1) {
+    btnNextEl.classList.remove('hide')
+  } else {
+    btnStartEl.innerText = "Restart"
+    btnStartEl.classList.remove('hide')
+  }
 };
+// status of each questin as true or false.
+function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+        alert("Correct Answer")
+        element.classList.add("correct")
+        return
+    } else {
+        alert("wrong ANswer")
+        element.classList.add('wrong')
+        return
+    }
+};
+
+function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
+}
+
+/// removes old questions with new questions.
+function resetState(){
+    btnNextEl.classList.add('hide')
+    while (answerButtonsEl.firstChild) {
+        answerButtonsEl.removeChild(answerButtonsEl.firstChild)
+ }
+}
 
 
 /// timer function countdown from 61 seconds.
@@ -95,5 +138,14 @@ function countdown() {
               {text: "Not too sure", correct: false},
               {text: "Whats up buddy", correct: false},
           ]
-      }
+      }, 
+      {
+        question: "How many are there?",
+        answers: [
+            {text: "52 program", correct: true},
+            {text: "78 times", correct: false},
+            {text: "8 too sure", correct: false},
+            {text: "15 up buddy", correct: false},
+        ]
+    }
   ]
