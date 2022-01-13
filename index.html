@@ -13,12 +13,37 @@
         <p>Click start game and begin Quiz <br />
         Get a correct answer, earn points, miss an answer and lose 10 seconds on timer.</p>
     </header>
-
+ <!--Start button to start quiz-->
     <main class="main-class">
-        <button class="start-btn" id="start-btn" type="submit">Start Quiz</button>
-
+       
     </main>
+    
 
+
+    <!--Timer div section-->
+    <section class="timer">
+        <div class="btnGroup">
+            <span class="timer">
+              <span id="counter">60 Seconds</span>
+            </span>
+          </div>
+    </section>
+
+    <!--Question container box-->
+    <section class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="start-btn btn" id="start-btn" type="submit">Start Quiz</button>
+        </div>
+    </section>
 
     <script src="js/script.js"></script>
 </body>
