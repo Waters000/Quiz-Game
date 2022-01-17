@@ -13,6 +13,7 @@
     <!--Header for Quiz name logo and timer-->
     <header>
         <h1 class="header-class">Quiz Game</h1>
+        <a href="#" id="viewHighScore">View High Scores</a>
         <div id="timer" class="timer">Time:<span id="timeRemaining">0</span></div>
         <div id="timesOut" class="timesOut" style="display: none";>Time is Out!</div>
     </header>
@@ -24,12 +25,16 @@
     <div id="main-container" class="main-container">
     <main id="main-class" class="main-class">
        <div id="start-div" class="start-class">
+           <div id="restart">
            <h1>JavaScript Coding Quiz</h1>
            <p>Test your knowlege with a quiz. <br />
         For each correct answer you get 10 points!
         For each wrong answer time gets deducted 10 seconds.</p>
-    <button type=submit id="start-btn">Start Quiz</button>   
+    <button type=submit id="start-btn">Start Quiz</button>  
+</div> 
+       </div>
     </div>
+    </main>
 
     <!--Question Holder, Title, question, Answer reponse-->
     <div id="questionHolder" style="display: none">
@@ -41,7 +46,8 @@
     <p><button id="answer3" class="buttonQuestion"></button></p>
     <p><button id="answer4" class="buttonQuestion"></button></p>
     <hr id="lineBreak" style="display: none" class="linkBreak">
-        <p id="answer" style="display: none;" >Answer</p>
+      <button id="nextbtn" type="submit" style="display: none" >Next</button>  
+    <p id="answer" style="display: none" >Answer</p>
     </div>
     </div>
 
@@ -49,17 +55,17 @@
     <div id="scoreHolder" style="display: none">
     <h2 class="userScore">Your Quiz Score is: <span id = "finalScore"></span></h2>
     <form>
-        <p class="scoreForm">Enter your name: <input id="scoreForm" class="scoreForm" type="text"></span>
+        <p class="scoreForm">Enter your name: <input id="nameInput" class="scoreForm" type="text"></span>
         <button type="submit" id="submitNameBtn">Submit Name</button></p>
     </form>
     </div>
 
     <!--High score -->
     <div id="highScoreContainer" class="highScoreContainer" style="display: none;">
-        <h3>High Scores</h3>
-        <div id="highScoreList" class="highScoreList">
+    
+        <div id="listOfHighScores" class="highScoreList">
             <p>
-                <button type="submit" id="backToQuiz">Back to Quiz</button>
+                <button class="backclass" id="goBackBtn">Back to Quiz</button>
             </p>
         </div>
     </div>
@@ -67,7 +73,7 @@
 
 
     </main>
-    </div>
+    
     
 
 
