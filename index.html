@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,43 +10,68 @@
     <link rel="stylesheet" href="assets/style.css"/>
 </head>
 <body>
+    <!--Header for Quiz name logo and timer-->
     <header>
         <h1 class="header-class">Quiz Game</h1>
-        <p>Click start game and begin Quiz <br />
-        Get a correct answer, earn points, miss an answer and lose 10 seconds on timer.</p>
+        <div id="timer" class="timer">Time:<span id="timeRemaining">0</span></div>
+        <div id="timesOut" class="timesOut" style="display: none";>Time is Out!</div>
     </header>
- <!--Start button to start quiz-->
-    <main class="main-class">
-       
+
+    <!--Main container will hold start screen
+    questions, score screen, high score screen-->
+
+    <!--THis will hold quiz info and start button-->
+    <div id="main-container" class="main-container">
+    <main id="main-class" class="main-class">
+       <div id="start-div" class="start-class">
+           <h1>JavaScript Coding Quiz</h1>
+           <p>Test your knowlege with a quiz. <br />
+        For each correct answer you get 10 points!
+        For each wrong answer time gets deducted 10 seconds.</p>
+    <button type=submit id="start-btn">Start Quiz</button>   
+    </div>
+
+    <!--Question Holder, Title, question, Answer reponse-->
+    <div id="questionHolder" style="display: none">
+    <p id="questionTitle" class="questionTitle"></p>
+    <div class="questions">
+    <!--question holder-->
+    <p><button id="answer1" class="buttonQuestion"></button></p>
+    <p><button id="answer2" class="buttonQuestion"></button></p>
+    <p><button id="answer3" class="buttonQuestion"></button></p>
+    <p><button id="answer4" class="buttonQuestion"></button></p>
+    <hr id="lineBreak" style="display: none" class="linkBreak">
+        <p id="answer" style="display: none;" >Answer</p>
+    </div>
+    </div>
+
+    <!--REturn user's score here-->
+    <div id="scoreHolder" style="display: none">
+    <h2 class="userScore">Your Quiz Score is: <span id = "finalScore"></span></h2>
+    <form>
+        <p class="scoreForm">Enter your name: <input id="scoreForm" class="scoreForm" type="text"></span>
+        <button type="submit" id="submitNameBtn">Submit Name</button></p>
+    </form>
+    </div>
+
+    <!--High score -->
+    <div id="highScoreContainer" class="highScoreContainer" style="display: none;">
+        <h3>High Scores</h3>
+        <div id="highScoreList" class="highScoreList">
+            <p>
+                <button type="submit" id="backToQuiz">Back to Quiz</button>
+            </p>
+        </div>
+    </div>
+
+
+
     </main>
+    </div>
     
 
 
-    <!--Timer div section-->
-    <section class="timer">
-        <div class="btnGroup">
-            <span class="timer">
-              <span id="counter">60 Seconds</span>
-            </span>
-          </div>
-    </section>
-
-    <!--Question container box-->
-    <section class="container">
-        <div id="question-container" class="hide">
-            <div id="question">Question</div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
-            </div>
-        </div>
-        <div class="controls">
-            <button class="start-btn btn" id="start-btn" type="submit">Start Quiz</button>
-            <button class="next-btn btn hide" id="next-btn" type="submit">Next</button>
-        </div>
-    </section>
+    
 
     <script src="js/script.js"></script>
 </body>
