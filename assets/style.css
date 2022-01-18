@@ -1,5 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 20px 35px;
+    background-color: rgb(187, 255, 0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    /*Prefix for safari brower only */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/code.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
+}
+
+.main-container {
+    align-content: center;
+    background-color: rgb(0, 189, 202);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 35px;
+    width: 70%;
+    margin: auto;
+    border-radius: 25px;
+    
+}
 
 
-.hide {
-    display: none;
+.timer {
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 20px 35px;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+.start-class button {
+    text-align: center;
+    text-decoration: underline;
+    color: blueviolet;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 25px;
+    position: relative;
+    left: 20%;
+}
+
+.buttonQuestion {
+    padding: 15px 32px;
+    margin: 5px;
+    background-color: beige;
+    border-radius: 15px;
+    
+}
+.buttonQuestion:hover {
+    background-color: rgb(187, 255, 0);
+}
+
+.questionTitle {
+    font-size: 25px;
+    border-bottom: 5px solid black;
+    color: #black;
+    border-bottom: #black;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: darkgreen;
+    box-shadow: 20px 0px 40px 20px #0ff;
+    background-color: white;
 }

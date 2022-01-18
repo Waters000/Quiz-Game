@@ -13,25 +13,105 @@
 
 var questions = [
     {
-        question: "What is Javascript?",
+        question: "1) What is Javascript?",
         answers: [
             "a) coding program",
-            "b) happy times",
-            "c) Not too sure",
-            "d) Whats up buddy",
+            "b) foreing language",
+            "c) fun new app",
+            "d) a way to say hi in French",
         ],
         correct: "a) coding program"
     }, 
     {
-        question: "How long is too long?",
+        question: "2) What is an Object?",
         answers: [
-            "a) Long timer",
-            "b) go for the long run",
-            "c) hippiety",
-            "d) Go noles",
+            "a) A thing you can touch",
+            "b) the only way to fly",
+            "c) a way to tie data together",
+            "d) anything and everything",
         ],
-        correct: "c) hippiety"
+        correct: "c) a way to tie data together"
   },
+  {
+    question: "3) Ways to interact with Arrays",
+    answers: [
+        "a) Push, Pop, sizzle, insert",
+        "b) Enter, fill, slice, jump",
+        "c) Snap, Crackle, Pop, Insert",
+        "d) Pop, Splice, Shift, Push",
+    ],
+    correct: "d) Pop, Splice, Shift, Push"
+},
+{
+    question: "4) What's the index for Love in var arrayName [love, me, tender, love me]",
+    answers: [
+        "a) 1",
+        "b) 2",
+        "c) 3",
+        "d) 0",
+    ],
+    correct: "d) 0"
+},
+{
+    question: "5) What is Global Scope vs Local Scope",
+    answers: [
+        "a) Global scope is universal and local scope is in town",
+        "b) Local scope is outside a function and global is inside a function",
+        "c) Global Scop can be used in all functions, local scope is only inside a specific function.",
+        "d) Go Global only, local scope never works.",
+    ],
+    correct: "c) Global Scop can be used in all functions, local scope is only inside a specific function."
+},
+{
+    question: "6) health += 20 is the same as...",
+    answers: [
+        "a) health = health + 20",
+        "b) variables can't be added to",
+        "c) health + 20",
+        "d) 20 = Health + 20",
+    ],
+    correct: "a) health = health + 20"
+},
+{
+    question: "7) How to call first object in Array?",
+    answers: [
+        "a) objectName.0",
+        "b) objectName(0)",
+        "c) objectName[0]",
+        "d) objectName..0",
+    ],
+    correct: "c) objectName[0]",
+},
+{
+    question: "8) What's a recursive call?",
+    answers: [
+        "a) Cursvie but in reverse",
+        "b) a function that calls itself",
+        "c) no such thing",
+        "d) any function that calls a variable",
+    ],
+    correct: "b) a function that calls itself",
+},
+{
+    question: "9) How to write string concatenation",
+    answers: [
+        "a) 'message ' + variable + ' message ' ",
+        "b) 'message, variable, message",
+        "c) 'message += variable += message",
+        "d) 'message = vairable = message",
+    ],
+    correct: "a) 'message ' + variable + ' message ' ",
+},
+{
+    question: "10) How to grab user input from window",
+    answers: [
+        "a) var userInput = prompt ",
+        "b) var userInput",
+        "c) var userInput = prompt('whats your question')",
+        "d) var userInput = ('whats your question')",
+    ],
+    correct: "c) var userInput = prompt('whats your question')",
+},
 ]
 
 // Move all ID elements to DOM
