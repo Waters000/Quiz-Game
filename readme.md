@@ -1,6 +1,6 @@
 # Quiz Game
 
-## Built on Javascript, HTML, CSS and Document Ojbect Manager
+## Built on Javascript, HTML, CSS and Document Object Manager
 
 ## Quiz game is a fun game that allows a user to test their Javascript knowledge.
 ## Get the question right, earn 10 points.
