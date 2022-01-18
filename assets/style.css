@@ -36,6 +36,11 @@ header {
     
 }
 
+.main-class p {
+    font-size: 25px;
+    text-align: left;
+}
+
 
 .timer {
     flex-wrap: wrap;
