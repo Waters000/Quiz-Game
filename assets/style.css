@@ -92,3 +92,15 @@ h2 {
     box-shadow: 20px 0px 40px 20px #0ff;
     background-color: white;
 }
+
+.highScoreList {
+    color:rgb(187, 255, 0);
+    font-size: 25px;
+}
+
+.backclass {
+    padding: 15px 32px;
+    margin: 5px;
+    background-color: beige;
+    border-radius: 15px;
+}

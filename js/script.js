@@ -304,7 +304,7 @@ function showHighScores() {
     timerEl.style.display = "none";
     questionHolderEl.style.display = "none";
     timeOutEl.style.display = "none";
-    scoreHolderEl.style.display = "block";
+    scoreHolderEl.style.display = "none";
     highScoreContainerEl.style.display = "block";
     
     
@@ -347,7 +347,7 @@ submitNameBtn.addEventListener("click", function(event){
     storeHighScores(event);
 });
 
-listOfHighScores.addEventListener("click", function(event) { 
+viewHighScore.addEventListener("click", function(event) { 
     showHighScores(event);
     
 });
